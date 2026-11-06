@@ -97,11 +97,25 @@ export const useScrollAnimations = () => {
 		window.addEventListener("scroll", updateLine, { passive: true });
 		updateLine();
 
+		const matIO = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((e) => {
+					if (!e.isIntersecting) return;
+					setTimeout(() => e.target.classList.add("shimmer"), 400);
+					matIO.unobserve(e.target);
+				});
+			},
+			{ threshold: 0.3 },
+		);
+		const matCard = document.querySelector(".material-card");
+		if (matCard) matIO.observe(matCard);
+
 		return () => {
 			sio.disconnect();
 			io.disconnect();
 			aboutIO.disconnect();
 			stepIO.disconnect();
+            matIO.disconnect();
 			window.removeEventListener("scroll", updateLine);
 		};
 	}, []);

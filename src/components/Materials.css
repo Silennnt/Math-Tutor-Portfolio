@@ -1,0 +1,114 @@
+#materials {
+  background: var(--bg2);
+  overflow: hidden;
+}
+
+.materials-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 65%);
+  top: -150px;
+  right: -150px;
+  pointer-events: none;
+}
+
+.material-card {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(0, 229, 255, 0.08));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: var(--r2);
+  padding: 32px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.material-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), transparent);
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.material-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.material-card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.pdf-preview {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pdf-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.pdf-meta strong {
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 2px;
+}
+
+.pdf-meta span {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+}
+
+.scene-3d-7 {
+  position: absolute;
+  bottom: 10%;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  perspective: 800px;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 5;
+}
+
+@keyframes shimmer-sweep {
+  from { transform: translateX(-100%) rotate(-15deg); }
+  to { transform: translateX(300%) rotate(-15deg); }
+}
+
+.material-card.shimmer::after {
+  animation: shimmer-sweep 0.9s ease forwards;
+}
+
+@keyframes download-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+}
+
+.downloading {
+  animation: download-pulse 0.3s ease 3;
+}

@@ -4,6 +4,7 @@ import FloatingMath from "./components/FloatingMath";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Offer from "./components/Offer";
+import Materials from "./components/Materials";
 import { useScrollAnimations } from "./utils/useScrollAnimations";
 import "./index.css";
 
@@ -15,6 +16,7 @@ function App() {
 			<Hero />
 			<About />
 			<Offer />
+			<Materials />
 			<BottomNav />
 		</div>
 	);
