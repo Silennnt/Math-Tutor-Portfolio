@@ -100,9 +100,62 @@ const Hero = () => {
 					</div>
 
 					<div className="hero-image-side">
-						<div className="profile-frame">
-							<img src="/profile.jpg" alt="DC Math - Ekspert Matematyki" />
-							<div className="profile-decoration"></div>
+						<div className="interactive-board-preview">
+							<div className="board-header">
+								<div className="board-dots">
+									<span className="dot-red"></span>
+									<span className="dot-yellow"></span>
+									<span className="dot-green"></span>
+								</div>
+								<div className="board-title">dcmath_tablica_robocza.draw</div>
+							</div>
+							<div className="board-body">
+								<div className="board-grid-inner"></div>
+
+								<div className="board-math-content">
+									<div className="math-equation">
+										<span style={{ color: "var(--cyan)" }}>∫</span> f(x) dx =
+										F(x) + C
+									</div>
+
+									<svg className="draw-path" viewBox="0 0 200 100" fill="none">
+										<path
+											d="M10,50 Q40,10 90,40 T180,30"
+											stroke="var(--violet)"
+											strokeWidth="4"
+											strokeLinecap="round"
+											strokeDasharray="300"
+											strokeDashoffset="300"
+										>
+											<animate
+												attributeName="stroke-dashoffset"
+												values="300;0"
+												dur="3s"
+												fill="freeze"
+												repeatCount="indefinite"
+											/>
+										</path>
+									</svg>
+								</div>
+
+								<div className="board-cursor">
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="var(--bg)"
+										strokeWidth="2"
+									>
+										<path
+											d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"
+											fill="#00e5ff"
+											stroke="#00e5ff"
+										/>
+									</svg>
+									<div className="cursor-label">Dawid</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

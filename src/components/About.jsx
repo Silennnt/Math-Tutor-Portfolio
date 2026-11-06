@@ -27,91 +27,65 @@ const About = () => {
 				</div>
 
 				<div className="about-card">
-					<div
-						style={{
-							display: "flex",
-							alignItems: "center",
-							gap: "16px",
-							marginBottom: "1.2rem",
-						}}
-					>
-						<div className="avatar-wrap">🧑‍🏫</div>
-						<div>
-							<strong
-								style={{
-									fontSize: "1.1rem",
-									fontFamily: "var(--font-head)",
-									display: "block",
-								}}
-							>
-								DC Math
-							</strong>
-							<span
-								style={{
-									fontSize: "0.8rem",
-									color: "var(--muted)",
-									fontFamily: "var(--font-mono)",
-								}}
-							>
-								Korepetytor Matematyki
-							</span>
-						</div>
+					{/* large profile image */}
+					<div className="about-large-image">
+						<img src="/profile.jpg" alt="Dawid Chrząszcz" />
 					</div>
 
-					<p
-						style={{
-							fontSize: "0.9rem",
-							color: "#94a3b8",
-							lineHeight: "1.8",
-							marginBottom: "1rem",
-						}}
-					>
-						Uczę matematyki inaczej niż na typowych korepetycjach. Zamiast
-						mechanicznie powtarzać schematy, pomagam uczniom zbudować{" "}
+					{/* author details */}
+					<div className="about-header-text">
+						<strong>Dawid Chrząszcz</strong>
+						<span>Student Wydziału Matematyki Stosowanej</span>
+					</div>
+
+					<p className="about-desc">
+						Studiuję Informatykę na Wydziale Matematyki Stosowanej Politechniki
+						Śląskiej. Od ponad 3 lat z sukcesami przygotowuję uczniów do
+						egzaminów dojrzałości. Moje podejście jest w pełni pragmatyczne -
+						skupiam się na{" "}
 						<strong style={{ color: "var(--text)" }}>
-							logiczne rozumienie problemu
-						</strong>
-						. Dostarczam niezbędne narzędzia i rozwijam umiejętność samodzielnej
-						analizy, co pozwala radzić sobie nawet z nietypowymi zadaniami.
+							realnych wymaganiach egzaminacyjnych
+						</strong>{" "}
+						i tzw. "pewniakach maturalnych". Nie tracimy czasu na teorię, która
+						nie przekłada się na wyniki.
 					</p>
 
-					<p
-						style={{ fontSize: "0.9rem", color: "#94a3b8", lineHeight: "1.8" }}
-					>
-						Pracuję z uczniami szkół średnich przygotowujących się do{" "}
+					<p className="about-desc">
+						Pracuję w oparciu o autorskie arkusze, ale równie chętnie
+						dostosowuję się do bieżących materiałów ucznia i wymagań konkretnego
+						nauczyciela w szkole. Dzięki temu, że sam stosunkowo niedawno
+						przechodziłem przez system maturalny, doskonale rozumiem presję
+						czasu i wiem, jak zoptymalizować naukę, by uczeń rozwiązywał zadania
+						z pełnym{" "}
 						<strong style={{ color: "var(--text)" }}>
-							matury podstawowej i rozszerzonej
+							logicznym zrozumieniem
 						</strong>
-						. Zapewniam pełne wsparcie i sprawdzone materiały, jednak to Twoja
-						systematyczność i praca własna ostatecznie przekuwają ten wysiłek w
-						sukces na egzaminie. Każda lekcja jest dopasowana do Twojego tempa.
+						, a nie tylko z pamięci.
 					</p>
 
+					{/* stats */}
 					<div className="stat-row">
 						<div className="stat-item">
+							<span className="stat-num">3+</span>
+							<span className="stat-lbl">Lata Doświadczenia</span>
+						</div>
+						<div className="stat-item">
+							<span className="stat-num">PŚ</span>
+							<span className="stat-lbl">Matematyka Stosowana</span>
+						</div>
+						<div className="stat-item">
 							<span className="stat-num">100%</span>
-							<span className="stat-lbl">Indywidualne</span>
-						</div>
-						<div className="stat-item">
-							<span className="stat-num">
-								Online
-								<br />+
-							</span>
-							<span className="stat-lbl">Stacjonarnie</span>
-						</div>
-						<div className="stat-item">
-							<span className="stat-num">Matura</span>
-							<span className="stat-lbl">Basic & Rozszerzenie</span>
+							<span className="stat-lbl">Skupienie na Celu</span>
 						</div>
 					</div>
 
+					{/* badges */}
 					<div className="badge-row">
 						<span className="badge badge-cyan">Logiczne myślenie</span>
 						<span className="badge badge-violet">Matura rozszerzona</span>
-						<span className="badge badge-pink">Materiały własne</span>
-						<span className="badge badge-pink">Narzędzia interaktywne</span>
-						<span className="badge badge-cyan">Radzionków & okolice</span>
-						<span className="badge badge-violet">Zwięźle i na temat</span>
+						<span className="badge badge-pink">Pewniaki maturalne</span>
+						<span className="badge badge-cyan">Politechnika Śląska</span>
+						<span className="badge badge-violet">Pragmatyczne podejście</span>
 					</div>
 				</div>
 			</div>
