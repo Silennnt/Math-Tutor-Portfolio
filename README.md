@@ -1,16 +1,41 @@
-# React + Vite
+# Math-Tutor-Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://shields.io)
+![Vite](https://shields.io)
 
-Currently, two official plugins are available:
+A modern, single-page application built for a mathematics tutor portfolio. The project was migrated from static HTML/CSS to React and features a custom dark theme, CSS-based 3D animations, and interactive UI elements.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Single Page Application (SPA):** High-performance architecture built with React and Vite.
+- **Custom Dark Theme:** Modern design with vibrant cyan and violet accents.
+- **Interactive Hero Area:** A preview of a digital whiteboard interface to engage students.
+- **Premium Scrolling Experience:** Custom native scrollbar with a multi-color gradient and smooth auto-hiding functionality.
+- **Fully Responsive:** Layout optimized for smartphones, tablets, and desktop devices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+- React 18
+- Vite
+- JavaScript (ES6+)
+- HTML5 / CSS3 (Custom Properties & 3D Transforms)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation & Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com
+   cd math-tutor-portfolio
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Available Scripts:**
+   - Run development server: `npm run dev`
+   - Build for production: `npm run build`
+   - Preview production build: `npm run preview`
