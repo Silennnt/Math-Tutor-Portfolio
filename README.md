@@ -1,9 +1,5 @@
 # Math-Tutor-Portfolio
 
-[![React](https://shields.io)](https://react.dev)
-[![Vite](https://shields.io)](https://vite.dev)
-[![JavaScript](https://shields.io)](https://mozilla.org)
-
 A modern, single-page application built for a mathematics tutor portfolio. The project was migrated from static HTML/CSS to React and features a custom dark theme, CSS-based 3D animations, and interactive UI elements.
 
 ## Features
