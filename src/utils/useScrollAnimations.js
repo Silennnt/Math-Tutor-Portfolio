@@ -110,12 +110,29 @@ export const useScrollAnimations = () => {
 		const matCard = document.querySelector(".material-card");
 		if (matCard) matIO.observe(matCard);
 
+		const pricingIO = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((e) => {
+					if (!e.isIntersecting) return;
+					document.querySelectorAll("#pricing .price-card").forEach((el, i) => {
+						setTimeout(() => el.classList.add("visible"), i * 120);
+					});
+					pricingIO.unobserve(e.target);
+				});
+			},
+			{ threshold: 0.1 },
+		);
+
+		const pricingSection = document.getElementById("pricing");
+		if (pricingSection) pricingIO.observe(pricingSection);
+
 		return () => {
 			sio.disconnect();
 			io.disconnect();
 			aboutIO.disconnect();
 			stepIO.disconnect();
-            matIO.disconnect();
+			matIO.disconnect();
+            pricingIO.disconnect();
 			window.removeEventListener("scroll", updateLine);
 		};
 	}, []);
