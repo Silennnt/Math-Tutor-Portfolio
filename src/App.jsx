@@ -6,6 +6,7 @@ import About from "./components/About";
 import Offer from "./components/Offer";
 import Materials from "./components/Materials";
 import Pricing from "./components/Pricing";
+import Contact from "./components/Contact";
 import { useScrollAnimations } from "./utils/useScrollAnimations";
 import "./index.css";
 
@@ -19,6 +20,7 @@ function App() {
 			<Offer />
 			<Materials />
 			<Pricing />
+			<Contact />
 			<BottomNav />
 		</div>
 	);

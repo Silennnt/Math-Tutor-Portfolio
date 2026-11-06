@@ -126,13 +126,30 @@ export const useScrollAnimations = () => {
 		const pricingSection = document.getElementById("pricing");
 		if (pricingSection) pricingIO.observe(pricingSection);
 
+		const contactIO = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((e) => {
+					if (!e.isIntersecting) return;
+					document.querySelectorAll(".contact-btn").forEach((el, i) => {
+						setTimeout(() => el.classList.add("vis"), i * 90);
+					});
+					contactIO.unobserve(e.target);
+				});
+			},
+			{ threshold: 0.15 },
+		);
+
+		const contactCard = document.querySelector(".contact-card");
+		if (contactCard) contactIO.observe(contactCard);
+
 		return () => {
 			sio.disconnect();
 			io.disconnect();
 			aboutIO.disconnect();
 			stepIO.disconnect();
 			matIO.disconnect();
-            pricingIO.disconnect();
+			contactIO.disconnect();
+			pricingIO.disconnect();
 			window.removeEventListener("scroll", updateLine);
 		};
 	}, []);
