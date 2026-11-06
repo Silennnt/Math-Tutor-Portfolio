@@ -4,6 +4,9 @@ import "./BottomNav.css";
 const BottomNav = () => {
 	return (
 		<nav className="bottom-nav" id="bottom-nav">
+			{}
+			<div className="nav-indicator" id="nav-indicator"></div>
+
 			<a href="#hero" className="active" data-section="hero">
 				<svg
 					viewBox="0 0 24 24"
