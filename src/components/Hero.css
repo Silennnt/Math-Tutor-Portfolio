@@ -5,6 +5,7 @@
 	justify-content: center;
 	overflow: hidden;
 	padding: 100px 0 120px;
+	position: relative;
 }
 
 .hero-canvas {
@@ -671,5 +672,56 @@
 	}
 	.hero-ctas .btn {
 		width: 100%;
+	}
+}
+.student-panel-wrapper {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	z-index: 100;
+	opacity: 0;
+	animation: fade-up 0.8s ease forwards 0.2s;
+}
+
+.btn-student {
+	background: rgba(13, 19, 32, 0.6);
+	border: 1px solid rgba(0, 229, 255, 0.3);
+	color: var(--cyan);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-student:hover {
+	background: rgba(0, 229, 255, 0.1);
+	border-color: var(--cyan);
+	color: var(--cyan);
+	box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+	transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+	.student-panel-wrapper {
+		top: 24px;
+		right: 24px;
+	}
+}
+
+@media (max-width: 600px) {
+	.student-panel-wrapper {
+		top: 16px;
+		right: 16px;
+	}
+
+	.btn-student {
+		padding: 0 16px;
+		min-height: 42px;
+		font-size: 0.8rem;
+		gap: 6px;
+	}
+
+	.btn-student svg {
+		width: 16px;
+		height: 16px;
 	}
 }

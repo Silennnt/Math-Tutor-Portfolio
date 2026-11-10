@@ -4,12 +4,29 @@ import "./Hero.css";
 const Hero = () => {
 	return (
 		<section id="hero">
+			<div className="student-panel-wrapper">
+				<a href="https://tablica.dcmath.edu.pl/" className="btn btn-student">
+					<svg 
+						width="18" 
+						height="18" 
+						viewBox="0 0 24 24" 
+						fill="none" 
+						stroke="currentColor" 
+						strokeWidth="2" 
+						strokeLinecap="round" 
+						strokeLinejoin="round"
+					>
+						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+						<circle cx="12" cy="7" r="4"></circle>
+					</svg>
+					Panel Ucznia
+				</a>
+			</div>
 			<div className="grid-bg"></div>
 			<div className="hero-canvas">
 				<div className="hero-glow-1"></div>
 				<div className="hero-glow-2"></div>
 
-				{}
 				<div className="hero-shape hero-shape-1">
 					<div className="cube" style={{ animationDuration: "18s" }}>
 						<div className="cube-face cf-front">∑</div>
