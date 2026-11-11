@@ -5,15 +5,18 @@ const Hero = () => {
 	return (
 		<section id="hero">
 			<div className="student-panel-wrapper">
-				<a href="https://tablica.dcmath.edu.pl/" className="btn btn-student">
-					<svg 
-						width="18" 
-						height="18" 
-						viewBox="0 0 24 24" 
-						fill="none" 
-						stroke="currentColor" 
-						strokeWidth="2" 
-						strokeLinecap="round" 
+				<a
+					href="https://tablica.dcmath.edu.pl/login"
+					className="btn btn-student"
+				>
+					<svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						strokeWidth="2"
+						strokeLinecap="round"
 						strokeLinejoin="round"
 					>
 						<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
